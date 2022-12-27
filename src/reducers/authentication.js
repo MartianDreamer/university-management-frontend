@@ -4,10 +4,16 @@ import {
   LOGIN_SUCCESS,
   LOGOUT,
 } from "../constants/authentication";
-const initState = {
-  demo: "hello world",
-  tokenDto: null,
-};
+const initState = (() => {
+  let token = localStorage.getItem("token");
+  if (token === undefined) {
+    token = null;
+  }
+  return {
+    tokenDto: JSON.parse(token),
+    error: null,
+  };
+})();
 
 const authenticateReducer = (state = initState, action) => {
   if (action.type === LOGIN) {
@@ -15,6 +21,7 @@ const authenticateReducer = (state = initState, action) => {
       ...state,
     };
   } else if (action.type === LOGIN_SUCCESS) {
+    localStorage.setItem("token", JSON.stringify(action.tokenDto));
     return {
       ...state,
       tokenDto: action.tokenDto,
@@ -26,6 +33,7 @@ const authenticateReducer = (state = initState, action) => {
       error: action.error,
     };
   } else if (action.type === LOGOUT) {
+    localStorage.removeItem("token");
     return {
       ...state,
       tokenDto: null,
