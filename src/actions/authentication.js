@@ -1,4 +1,9 @@
-import { LOGIN, LOGIN_SUCCESS, LOGOUT } from "../constants/authentication";
+import {
+  LOGIN,
+  LOGIN_FAILED,
+  LOGIN_SUCCESS,
+  LOGOUT,
+} from "../constants/authentication";
 
 const loginAction = (credential) => {
   return {
@@ -14,10 +19,17 @@ const loginSuccessAction = (tokenDto) => {
   };
 };
 
+const loginFailedAction = (error) => {
+  return {
+    type: LOGIN_FAILED,
+    error,
+  };
+};
+
 const logoutAction = () => {
   return {
     type: LOGOUT,
   };
 };
 
-export { loginAction, loginSuccessAction, logoutAction };
+export { loginAction, loginSuccessAction, loginFailedAction, logoutAction };

@@ -4,9 +4,9 @@ import LoginForm from "./LoginForm";
 import SideBar from "./SideBar";
 import AppBody from "./AppBody";
 
-function AppContainer(props) {
+function AppContainer() {
   const token = useSelector((state) => state.authenticate.tokenDto);
-  console.log(token);
+
   return (
     <React.Fragment>
       {token === null ? (
