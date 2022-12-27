@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT } from "../constants/authentication";
+import { LOGIN, LOGIN_SUCCESS, LOGOUT } from "../constants/authentication";
 const initState = {
   demo: "hello world",
   tokenDto: null,
@@ -6,6 +6,10 @@ const initState = {
 
 const authenticateReducer = (state = initState, action) => {
   if (action.type === LOGIN) {
+    return {
+      ...state,
+    };
+  } else if (action.type === LOGIN_SUCCESS) {
     return {
       ...state,
       tokenDto: action.tokenDto,

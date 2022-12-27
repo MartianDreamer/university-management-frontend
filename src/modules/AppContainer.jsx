@@ -6,6 +6,7 @@ import AppBody from "./AppBody";
 
 function AppContainer(props) {
   const token = useSelector((state) => state.authenticate.tokenDto);
+  console.log(token);
   return (
     <React.Fragment>
       {token === null ? (

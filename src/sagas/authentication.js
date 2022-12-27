@@ -4,7 +4,7 @@ import { call, put } from "redux-saga/effects";
 
 function* loginWithActionSaga(action) {
   const data = yield call(login, action.credential);
-  return yield put(loginSuccessAction(data));
+  return yield put(loginSuccessAction(data.data));
 }
 
 export default loginWithActionSaga;
