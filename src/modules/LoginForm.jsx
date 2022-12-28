@@ -53,7 +53,7 @@ function LoginForm() {
             className="border-2 border-slate-600 rounded-md w-3/12 font-semibold"
             onClick={handleSubmit}
           >
-            Submit!
+            Submit
           </button>
         </div>
       </div>

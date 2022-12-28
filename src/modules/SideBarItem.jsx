@@ -1,5 +1,9 @@
-function SideBarItem({ content, handleOnclick }) {
-  return <a onClick={handleOnclick}>{content}</a>;
+function SideBarItem({ handleOnclick, children }) {
+  return (
+    <div>
+      <p onClick={handleOnclick}>{children}</p>
+    </div>
+  );
 }
 
 export default SideBarItem;

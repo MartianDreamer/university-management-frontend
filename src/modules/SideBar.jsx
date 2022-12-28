@@ -1,4 +1,12 @@
-function SideBar(props) {
+import { useDispatch } from "react-redux";
+import SideBarItem from "./SideBarItem";
+import { logoutAction } from "../actions/authentication";
+
+function SideBar() {
+  const dispatch = useDispatch();
+  const handleLogOut = () => {
+    dispatch(logoutAction());
+  };
   return (
     <div
       style={{
@@ -6,7 +14,9 @@ function SideBar(props) {
         width: 200,
         backgroundColor: "coral",
       }}
-    ></div>
+    >
+      <SideBarItem handleOnclick={handleLogOut}>Log out</SideBarItem>
+    </div>
   );
 }
 export default SideBar;
