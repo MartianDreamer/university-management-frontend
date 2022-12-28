@@ -1,6 +1,6 @@
-function SideBarItem({ handleOnclick, children }) {
+function SideBarItem({ handleOnclick, className, children }) {
   return (
-    <div>
+    <div className={className}>
       <p onClick={handleOnclick}>{children}</p>
     </div>
   );
