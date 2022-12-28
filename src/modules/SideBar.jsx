@@ -1,9 +1,8 @@
 import { useDispatch } from "react-redux";
-import SideBarItem from "./SideBarItem";
 import { logoutAction } from "../actions/authentication";
-import { useState } from "react";
+import SideBarItem from "./SideBarItem";
 
-function SideBar() {
+function SideBar({ selectedItem, setSelectedItem }) {
   const itemClassName =
     "p-2 bg-purple-400 rounded-md hover:bg-purple-300 mb-1 active:bg-purple-600";
 
@@ -11,7 +10,6 @@ function SideBar() {
     "p-2 bg-purple-600 rounded-md hover:bg-purple-300 mb-1 active:bg-purple-400";
 
   const dispatch = useDispatch();
-  const [selectedItem, setSelectedItem] = useState();
 
   const handleSelectItem = (id) => {
     if (id === selectedItem) {
