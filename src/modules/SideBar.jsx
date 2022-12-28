@@ -4,10 +4,10 @@ import SideBarItem from "./SideBarItem";
 
 function SideBar({ selectedItem, setSelectedItem }) {
   const itemClassName =
-    "p-2 bg-purple-400 rounded-md hover:bg-purple-300 mb-1 active:bg-purple-600";
+    "cursor-pointer	p-2 bg-purple-400 rounded-md hover:bg-purple-300 mb-1 active:bg-purple-600";
 
   const selectedItemClassName =
-    "p-2 bg-purple-600 rounded-md hover:bg-purple-300 mb-1 active:bg-purple-400";
+    "cursor-pointer	p-2 bg-purple-600 rounded-md hover:bg-purple-300 mb-1 active:bg-purple-400";
 
   const dispatch = useDispatch();
 
