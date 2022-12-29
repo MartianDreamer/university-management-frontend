@@ -6,7 +6,7 @@ import AppBody from "./AppBody";
 
 function AppContainer() {
   const token = useSelector((state) => state.authenticate.tokenDto);
-  const [selectedItem, setSelectedItem] = useState();
+  const [selectedItem, setSelectedItem] = useState(1);
 
   return (
     <React.Fragment>

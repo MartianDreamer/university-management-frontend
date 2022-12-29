@@ -21,14 +21,21 @@ function SideBar({ selectedItem, setSelectedItem }) {
 
   const items = [
     {
-      id: 0,
+      id: 1,
       name: "Item1",
       handleOnClick() {
-        handleSelectItem(0);
+        handleSelectItem(1);
       },
     },
     {
-      id: 1,
+      id: 2,
+      name: "Item2",
+      handleOnClick() {
+        handleSelectItem(2);
+      },
+    },
+    {
+      id: 3,
       name: "Logout",
       handleOnClick() {
         handleSelectItem(1);
