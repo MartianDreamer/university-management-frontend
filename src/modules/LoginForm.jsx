@@ -4,6 +4,8 @@ import { loginAction } from "../actions/authentication";
 
 function LoginForm() {
   const error = useSelector((state) => state.authenticate.error);
+  const inputClassName = "mt-2 border-2 border-slate-600 pl-1 rounded-sm";
+  const inputErrorClassName = "mt-2 border-4 border-red-600 pl-1 rounded-sm";
   const [credential, setCredential] = useState({
     username: "",
     password: "",
@@ -23,7 +25,7 @@ function LoginForm() {
           Username
         </label>
         <input
-          className="mt-2 border-2 border-slate-600"
+          className={(error && inputErrorClassName) || inputClassName}
           id="username"
           type="text"
           onChange={(e) =>
@@ -37,7 +39,7 @@ function LoginForm() {
           Password
         </label>
         <input
-          className="mt-2 border-2 border-slate-600"
+          className={(error && inputErrorClassName) || inputClassName}
           id="password"
           type="password"
           onChange={(e) =>
