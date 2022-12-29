@@ -20,8 +20,8 @@ function LoginForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="flex justify-center">
-        <div className="grid grid-cols-1 w-96 absolute top-72 p-2 border-4 border-slate-600 rounded-md">
+      <div className="flex justify-center h-screen items-center">
+        <div className="grid grid-cols-1 w-96 p-2 border-4 border-slate-600 rounded-md">
           <label className="mt-2 font-semibold" htmlFor="username">
             Username
           </label>

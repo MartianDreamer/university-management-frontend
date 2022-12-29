@@ -22,7 +22,7 @@ function SideBar({ selectedItem, setSelectedItem }) {
   const items = [
     {
       id: 1,
-      name: "Item1",
+      name: "Account",
       handleOnClick() {
         handleSelectItem(1);
       },
@@ -45,7 +45,7 @@ function SideBar({ selectedItem, setSelectedItem }) {
   ];
 
   return (
-    <div className="w-52 p-2 min-h-screen bg-orange-200 rounded-md font-semibold antialiased font-mono">
+    <div className="w-52 flex-none p-2 min-h-screen bg-orange-200 rounded-md font-semibold antialiased font-mono">
       {items.map((e) => (
         <SideBarItem
           key={e.id}

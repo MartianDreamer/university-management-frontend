@@ -9,7 +9,7 @@ function AppBody({ selectedItem }) {
   ];
 
   return (
-    <div className="m-4">
+    <div className="m-4 grow">
       {items
         .filter((e) => e.id === selectedItem)
         .map((e) => (
