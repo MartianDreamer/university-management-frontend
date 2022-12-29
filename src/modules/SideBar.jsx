@@ -48,6 +48,7 @@ function SideBar({ selectedItem, setSelectedItem }) {
     <div className="w-52 p-2 min-h-screen bg-purple-200 rounded-md font-semibold antialiased font-mono">
       {items.map((e) => (
         <SideBarItem
+          key={e.id}
           handleOnclick={e.handleOnClick}
           className={
             e.id === selectedItem ? selectedItemClassName : itemClassName

@@ -13,13 +13,13 @@ function AppContainer() {
       {token === null ? (
         <LoginForm />
       ) : (
-        <React.Fragment>
+        <div className="flex">
           <SideBar
             selectedItem={selectedItem}
             setSelectedItem={setSelectedItem}
           />
-          <AppBody />
-        </React.Fragment>
+          <AppBody selectedItem={selectedItem} />
+        </div>
       )}
     </React.Fragment>
   );
