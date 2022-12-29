@@ -10,7 +10,7 @@ function DetailModificationDialog({
 }) {
   return (
       <form>
-        <div className="grid grid-cols-1 border-4 rounded-lg border-slate-600 p-4 h-max w-max absolute top-1/4 left-1/2 bg-white">
+        <div className="grid grid-cols-1 border-4 rounded-lg border-slate-600 p-4 h-max w-max absolute top-64 right-1/3 bg-white">
           <div id={data !== null ? data.id : "null"}>
             {createForm(null, data, scheme)}
           </div>
