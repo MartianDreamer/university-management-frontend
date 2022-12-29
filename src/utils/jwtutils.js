@@ -3,4 +3,8 @@ function getClaims(jwtToken) {
   return JSON.parse(window.atob(parts[1]));
 }
 
-export { getClaims };
+function getRoles(jwtToken) {
+  return getClaims(jwtToken).authority;
+}
+
+export { getClaims, getRoles };
