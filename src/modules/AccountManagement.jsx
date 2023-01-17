@@ -32,6 +32,10 @@ function AccountManagement() {
             handleCancel={() => {
               setOpenDialog(false);
             }}
+            handleSubmit={() => {
+              setOpenDialog(false);
+              console.log("submit");
+            }}
             scheme={AccountScheme}
             data={null}
           />
